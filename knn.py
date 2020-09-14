@@ -1,9 +1,7 @@
 import sklearn
-from sklearn.utils import shuffle
 from sklearn.neighbors import KNeighborsClassifier
-from sklearn import linear_model, preprocessing
+from sklearn import preprocessing
 import pandas as pd
-import numpy as np
 
 data = pd.read_csv('car.data')
 predict = 'class'
@@ -31,5 +29,5 @@ print(acc)
 predicted = KNN_Model.predict(x_test)
 names = le.classes_
 
-for i in range(len(predicted)):
-    print('Prediction: ', names[predicted[i]],'|', "Data: ", x_test[i], '|', "Actual: ", names[y_test[i]])
+# for i in range(len(predicted)):
+#     print('Prediction: ', names[predicted[i]],'|', "Data: ", x_test[i], '|', "Actual: ", names[y_test[i]])
